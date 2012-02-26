@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_-8wJsVTiEeCEzvPWBGAWcg" name="BeerXml2Viewer">
+  <elementImport xmi:id="_-_vzUFTiEeCEzvPWBGAWcg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_-_6LYFTiEeCEzvPWBGAWcg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_-_6LYVTiEeCEzvPWBGAWcg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_-_6LYlTiEeCEzvPWBGAWcg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BPOioFTjEeCEzvPWBGAWcg" name="BeerXml2File">
+    <ownedAttribute xmi:id="_QVmkgFTmEeC0kvRvXAv1vQ" name="marshal" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CjbVcFTjEeCEzvPWBGAWcg" name="BeerXml2Viewer">
+    <ownedAttribute xmi:id="_sCklYFTnEeC0kvRvXAv1vQ" name="CommandInvoker invoker" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EcrWEFTjEeCEzvPWBGAWcg" name="BeerXml2FilePanel">
+    <ownedAttribute xmi:id="_3rCIMFTlEeC0kvRvXAv1vQ" name="BeerXml2File myFile" aggregation="composite"/>
+    <ownedAttribute xmi:id="_DdmjkFilEeCLrNeqozM_Ng" name="JTable hop_bill" aggregation="composite"/>
+    <ownedAttribute xmi:id="_MamTwFilEeCLrNeqozM_Ng" name="JTable grain_bill" aggregation="composite"/>
+    <ownedAttribute xmi:id="_P4McAFilEeCLrNeqozM_Ng" name="JTable adjuncts" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dmw_8FTjEeCEzvPWBGAWcg" name="CommandInvoker">
+    <ownedAttribute xmi:id="_l1TusFTjEeCEzvPWBGAWcg" name="Command currentCommand" aggregation="composite"/>
+    <ownedAttribute xmi:id="_PGr8EF8zEeCpWpV1SZ3S1w" name="Stack commandStack" aggregation="composite"/>
+    <ownedOperation xmi:id="_sQPx0FTjEeCEzvPWBGAWcg" name="setCommand">
+      <ownedParameter xmi:id="_E8gQMFTkEeC0kvRvXAv1vQ" direction="return"/>
+      <ownedParameter xmi:id="_E8g3QFTkEeC0kvRvXAv1vQ" name="Command c"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_MAxkMFTkEeC0kvRvXAv1vQ" name="run">
+      <ownedParameter xmi:id="_QJyA8FTkEeC0kvRvXAv1vQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MPdOgFTmEeC0kvRvXAv1vQ" name="CellEditCommand" clientDependency="_4VTrcF8xEeCpWpV1SZ3S1w">
+    <ownedAttribute xmi:id="_DrJZMFToEeC0kvRvXAv1vQ" name="Receiver receiver" aggregation="composite"/>
+    <interfaceRealization xmi:id="_4VTrcF8xEeCpWpV1SZ3S1w" supplier="_OYt9UFlVEeCJR7cN10VVmg" client="_MPdOgFTmEeC0kvRvXAv1vQ" contract="_OYt9UFlVEeCJR7cN10VVmg"/>
+    <ownedOperation xmi:id="_Rvi9gFTnEeC0kvRvXAv1vQ" name="execute">
+      <ownedParameter xmi:id="_VOGIAFTnEeC0kvRvXAv1vQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TFUTEFTmEeC0kvRvXAv1vQ" name="BeerXml2File">
+    <ownedAttribute xmi:id="_U-Z7oFTmEeC0kvRvXAv1vQ" name="BeerXml myRecipe" aggregation="composite"/>
+    <ownedAttribute xmi:id="_dO_RwFTmEeC0kvRvXAv1vQ" name="File myXmlFile" aggregation="composite"/>
+    <ownedOperation xmi:id="_mKl60FTmEeC0kvRvXAv1vQ" name="marshal">
+      <ownedParameter xmi:id="_m-1bMFTmEeC0kvRvXAv1vQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nerY4FTmEeC0kvRvXAv1vQ" name="unmarshal">
+      <ownedParameter xmi:id="_oJyLYFTmEeC0kvRvXAv1vQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_9pQksFTmEeC0kvRvXAv1vQ" name="getBeerXml">
+      <ownedParameter xmi:id="_-iGRMFTmEeC0kvRvXAv1vQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_10Ey0FikEeCLrNeqozM_Ng" name="getName">
+      <ownedParameter xmi:id="_2kSu0FikEeCLrNeqozM_Ng" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_d3sSQF8zEeCpWpV1SZ3S1w" name="getFile">
+      <ownedParameter xmi:id="_gGGDgF8zEeCpWpV1SZ3S1w" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_HmmZUF80EeCpWpV1SZ3S1w" name="setFile">
+      <ownedParameter xmi:id="_I_-nEF80EeCpWpV1SZ3S1w" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AAVigFlVEeCJR7cN10VVmg" name="HopBillTM" clientDependency="_YYyUEFlVEeCJR7cN10VVmg">
+    <interfaceRealization xmi:id="_YYyUEFlVEeCJR7cN10VVmg" supplier="_Lyh-MFlVEeCJR7cN10VVmg" client="_AAVigFlVEeCJR7cN10VVmg" contract="_Lyh-MFlVEeCJR7cN10VVmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BzxPAFlVEeCJR7cN10VVmg" name="GrainBillTM" clientDependency="_ZdmnEFlVEeCJR7cN10VVmg">
+    <interfaceRealization xmi:id="_ZdmnEFlVEeCJR7cN10VVmg" supplier="_Lyh-MFlVEeCJR7cN10VVmg" client="_BzxPAFlVEeCJR7cN10VVmg" contract="_Lyh-MFlVEeCJR7cN10VVmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Crx1EFlVEeCJR7cN10VVmg" name="RecipeHeaderTM" clientDependency="_bPW4kFlVEeCJR7cN10VVmg">
+    <interfaceRealization xmi:id="_bPW4kFlVEeCJR7cN10VVmg" supplier="_Lyh-MFlVEeCJR7cN10VVmg" client="_Crx1EFlVEeCJR7cN10VVmg" contract="_Lyh-MFlVEeCJR7cN10VVmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Lyh-MFlVEeCJR7cN10VVmg" name="TableModel"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_OYt9UFlVEeCJR7cN10VVmg" name="Command"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Pa_SoFlVEeCJR7cN10VVmg" name="Receiver"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9juGgF8wEeCpWpV1SZ3S1w" name="has a" memberEnd="_9jutkF8wEeCpWpV1SZ3S1w _9jvUoV8wEeCpWpV1SZ3S1w">
+    <ownedEnd xmi:id="_9jutkF8wEeCpWpV1SZ3S1w" name="src" type="_EcrWEFTjEeCEzvPWBGAWcg" association="_9juGgF8wEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9jvUoF8wEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9jutkV8wEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_9jvUoV8wEeCpWpV1SZ3S1w" name="dst" type="_TFUTEFTmEeC0kvRvXAv1vQ" association="_9juGgF8wEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9jv7sV8wEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9jv7sF8wEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sVcAIF8xEeCpWpV1SZ3S1w" name="has many" memberEnd="_sVcnMF8xEeCpWpV1SZ3S1w _sVd1UF8xEeCpWpV1SZ3S1w">
+    <ownedEnd xmi:id="_sVcnMF8xEeCpWpV1SZ3S1w" name="src" type="_CjbVcFTjEeCEzvPWBGAWcg" association="_sVcAIF8xEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sVdOQV8xEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sVdOQF8xEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_sVd1UF8xEeCpWpV1SZ3S1w" name="dst" type="_EcrWEFTjEeCEzvPWBGAWcg" association="_sVcAIF8xEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sVecYV8xEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sVecYF8xEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mcmvEF8yEeCpWpV1SZ3S1w" memberEnd="_mcnWIF8yEeCpWpV1SZ3S1w _mcokQF8yEeCpWpV1SZ3S1w">
+    <ownedEnd xmi:id="_mcnWIF8yEeCpWpV1SZ3S1w" name="src" type="_CjbVcFTjEeCEzvPWBGAWcg" association="_mcmvEF8yEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mcn9MV8yEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mcn9MF8yEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_mcokQF8yEeCpWpV1SZ3S1w" name="dst" type="_dmw_8FTjEeCEzvPWBGAWcg" association="_mcmvEF8yEeCpWpV1SZ3S1w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mcpLUV8yEeCpWpV1SZ3S1w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mcpLUF8yEeCpWpV1SZ3S1w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>
