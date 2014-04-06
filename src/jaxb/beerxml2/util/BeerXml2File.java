@@ -47,7 +47,7 @@ public class BeerXml2File {
             Unmarshaller unmarshaller = jc.createUnmarshaller();
             
             myRecipe = (BeerXml)
-            unmarshaller.unmarshal(myFile);
+               unmarshaller.unmarshal(myFile);
             
 
         } catch( JAXBException jbe ) {

@@ -50,6 +50,8 @@ public class RecipeHeaderTM extends AbstractTableModel {
         data[0][2] = recipe.getAuthor();
         data[0][3] = recipe.getCreated();
         
+        System.out.println(data);
+        
         //fire a data changed event to notify any listeners
         fireTableDataChanged();
     }

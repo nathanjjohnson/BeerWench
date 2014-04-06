@@ -59,6 +59,8 @@ public class HopBillTM extends AbstractTableModel {
         //initialize the data array
         data = new Object[hops.size()][titles.length];
         
+        
+        
         for(int i = 0; i < hops.size(); i++) {          
             data[i][0] = new String(hops.get(i).getName());
             data[i][1] = new String(hops.get(i).getOrigin());
