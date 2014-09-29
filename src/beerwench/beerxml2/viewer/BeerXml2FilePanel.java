@@ -9,6 +9,7 @@ import javax.swing.event.TableModelListener;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import java.util.List;
+import java.util.logging.*;
 import javax.swing.SpringLayout;
 
 //generated jaxb imports
@@ -27,6 +28,7 @@ import javax.swing.Box;
 @SuppressWarnings("serial")
 public class BeerXml2FilePanel extends JPanel implements TableModelListener {
     
+	private static Logger logger = Logger.getLogger(BeerXml2FilePanel.class.getName());
     private BeerXml2File myFile;
     private JTable table;
     private JTable table_1;
@@ -91,6 +93,7 @@ public class BeerXml2FilePanel extends JPanel implements TableModelListener {
      */
     public BeerXml2FilePanel() {
         
+    	logger.log(Level.FINER, "Created BeerXml2FilePanel object");
         SpringLayout springLayout = new SpringLayout();
         setLayout(springLayout);
         

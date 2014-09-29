@@ -5,6 +5,7 @@
 package beerwench.beerxml2.viewer;
 
 import javax.swing.table.TableModel;
+import java.util.logging.*;
 
 /**
  * @author nate
@@ -12,6 +13,7 @@ import javax.swing.table.TableModel;
  */
 public class CellEditCommand implements Command {
 
+	private static Logger logger = Logger.getLogger(CellEditCommand.class.getName());
     private Object previousValue;    
     private BeerXml2FilePanel filePanel;
     private int row, col;
@@ -19,6 +21,8 @@ public class CellEditCommand implements Command {
     
     public CellEditCommand(BeerXml2FilePanel fp, TableModel tm,
                            int r, int c) {
+    	
+    	logger.log(Level.FINER, "Created CellEditCommand object");
         filePanel = fp;
         tableModel = tm;
         row = r;

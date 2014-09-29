@@ -11,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
 import java.util.Stack;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import jaxb.beerxml2.util.*;
 import javax.swing.JLabel;
@@ -29,8 +31,10 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
+
 public class BeerXML2Viewer {
 
+	private static Logger logger = Logger.getLogger(BeerXML2Viewer.class.getName());
     private JFrame frmBeerxmlRecipeEditor;
     private ArrayList<BeerXml2FilePanel> openFiles;
     private CommandInvoker invoker;
@@ -56,6 +60,9 @@ public class BeerXML2Viewer {
      * Create the application.
      */
     public BeerXML2Viewer() {
+
+    	logger.log(Level.WARNING, "Created BeerXML2Viewer object");
+
         invoker = new CommandInvoker();
         
         initialize();
